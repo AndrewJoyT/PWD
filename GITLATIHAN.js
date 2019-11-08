@@ -1,3 +1,3 @@
 
 
-JANCUK
+console.log('HELLO JANCUK')
