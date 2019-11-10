@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap css -->
+    <style>
+      
+      * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+  
+  h3 {
+    text-align: center;
+    background:red;
+    color:blue;
+  }
+  
+  .sort button {
+    margin: 10px 10px 0 10px;
+  }
+  
+  table {
+    text-align: center;
+  }
+
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+
+    
+   
+    <link rel="stylesheet" href="./style.css" />
+
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>DATA PERUSAHAAN</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <h3>DATA KARYAWAN</h3>
+      
+      <form class="mt-3" id="user-form">
+        
+        <div class="form-group row justify-content-md-center">
+          <label for="nama" class="col-sm-2 col-form-label">Nama  :</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="nama" />
+          </div>
+        </div>
+
+       
+        <div class="form-group row justify-content-md-center">
+          <label for="umur" class="col-sm-2 col-form-label">Umur  :</label>
+          <div class="col-sm-4">
+            <input type="number" class="form-control" id="umur" />
+          </div>
+        </div>
+
+     
+        <fieldset class="form-group">
+          <div class="row justify-content-md-center">
+            <legend class="col-sm-2 col-form-label">Gender  :</legend>
+            <div class="col-sm-4 pt-2">
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="radio"
+                  id="radio1"
+                  value="Pria"
+                />
+                Pria
+                <label for="radio1" class="form-check-label"></label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="radio"
+                  id="radio2"
+                  value="Wanita"
+                />
+                Wanita
+                <label for="radio2" class="form-check-label"></label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        
+        <div class="form-group row justify-content-md-center">
+          <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan  :</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="pekerjaan" />
+          </div>
+        </div>
+
+      
+        <div class="row justify-content-md-center">
+          <button type="button" class="btn btn-secondary" id="btn-submit">
+            Submit
+          </button>
+        </div>
+      </form>
+     
+      <h3 class="mt-3">Sort Data</h3>
+      <div class="row justify-content-md-center sort">
+       
+        <button type="button" class="btn btn-primary" id="btn-sort-nama">
+          Nama
+        </button>
+
+        
+        <button type="button" class="btn btn-success" id="btn-sort-umur">
+          Umur
+        </button>
+       
+        <button type="button" class="btn btn-warning" id="btn-sort-gender">
+          Gender
+        </button>
+
+      
+        <button type="button" class="btn btn-danger" id="btn-sort-pekerjaan">
+          Pekerjaan
+        </button>
+      </div>
+     
+
+    >
+      <table class="table table-bordered table-sm mt-3">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">No :</th>
+            <th scope="col">Nama :</th>
+            <th scope="col">Umur :</th>
+            <th scope="col">Gender :</th>
+            <th scope="col">Pekerjaan :</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+         
+        </tbody>
+      </table>
+      
+    </div>
+  
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+
+      
+
+    ></script>
+
+  
+    <script>
+    
+    class User {
+  constructor(a, b, c, d) {
+    (this.nama = a), (this.umur = b), (this.gender = c), (this.pekerjaan = d);
+  }
+}
+
+
+let arrUser = [];
+
+
+displayData = a => {
+  let output = '';
+
+  a.forEach((val, index) => {
+    output += `
+              <tr>
+                  <td scope="row">${index + 1}</td>
+                  <td >${val.nama}</td>
+                  <td >${val.umur}</td>
+                  <td >${val.gender}</td>
+                  <td >${val.pekerjaan}</td>
+              </tr>
+          `;
+  });
+  document.getElementById('table-body').innerHTML = output;
+};
+
+
+document.getElementById('btn-submit').addEventListener('click', e => {
+  e.preventDefault();
+  const nama = document.getElementById('nama').value;
+  const umur = document.getElementById('umur').value;
+  const pekerjaan = document.getElementById('pekerjaan').value;
+  let gender;
+  if (document.getElementsByName('radio')[0].checked) {
+    gender = 'Pria';
+  } else if (document.getElementsByName('radio')[1].checked) {
+    gender = 'Wanita';
+  } else {
+    gender = '';
+  }
+
+
+  arrUser.push(new User(nama, umur, gender, pekerjaan));
+
+ 
+  displayData(arrUser);
+});
+
+document.getElementById('btn-sort-nama').addEventListener('click', () => {
+  arrUser.sort((user1, user2) => {
+    if (user1.nama > user2.nama) return 1;
+    if (user1.nama < user2.nama) return -1;
+  });
+
+  displayData(arrUser);
+});
+
+
+document.getElementById('btn-sort-umur').addEventListener('click', () => {
+  arrUser.sort((user1, user2) => {
+    if (user1.umur > user2.umur) return 1;
+    if (user1.umur < user2.umur) return -1;
+  });
+
+  displayData(arrUser);
+});
+
+
+document.getElementById('btn-sort-gender').addEventListener('click', () => {
+  arrUser.sort((user1, user2) => {
+    if (user1.gender > user2.gender) return 1;
+    if (user1.gender < user2.gender) return -1;
+  });
+
+  displayData(arrUser);
+});
+
+
+document.getElementById('btn-sort-pekerjaan').addEventListener('click', () => {
+  arrUser.sort((user1, user2) => {
+    if (user1.pekerjaan > user2.pekerjaan) return 1;
+    if (user1.pekerjaan < user2.pekerjaan) return -1;
+  });
+
+  displayData(arrUser);
+});
+
+
+document.getElementById('btn-sort-reset').addEventListener('click', () => {
+  arrUser.sort((user1, user2) => {
+    if (user1 > user2) return 1;
+    if (user1 < user2) return -1;
+  });
+});
+
+    </script>
+  </body>
+</html>
