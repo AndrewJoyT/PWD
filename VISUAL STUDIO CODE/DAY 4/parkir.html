@@ -1,0 +1,64 @@
+
+<html>
+<script>
+     
+        
+        
+        
+    konfirmasi1 = true
+    while ( konfirmasi ) {
+        var MASUK=parseInt(prompt('Jam berapa masuk parkir? '))
+        if(MASUK >0 && MASUK <=12 ) {
+        break
+        } else {
+        alert('SALAH INPUT')
+    }
+    
+   
+   var konfirmasi=true
+   var KONDISI2 =parseInt(prompt('1. AM \n2. PM'))
+    if (KONDISI1 == 1 || KONDISI1 == 2){
+        konfirmasi = false
+    }else {
+        alert('SALAH INPUT')
+    }
+    
+     
+    while (konfirmasi) {
+        var KELUAR =parseInt(prompt('jam berapa keluar parkir? '))
+        if (KELUAR >=1 && KELUAR <13){
+            break
+    }else{
+        alert('SALAH INPUT')
+}    
+    }
+    
+do {
+        
+        var konfirmasi1 = true
+        var KONDISI1 =parseInt(prompt('1. AM \n2. PM'))
+    
+        if (KONDISI2 == 1 || KONDISI2 == 2){
+            konfirmasi1 = false
+        }else {
+            alert('SALAH INPUT')
+        }
+        } while (konfirmasi);
+    
+    if ( MASUK > KELUAR && KONDISI1 !== KONDISI2){
+        KELUAR+=12
+    }else if (KONDISI1 == KONDISI2 && MASUK > KELUAR){
+        KELUAR +=24
+    }
+    var LAMAPARKIR = KELUAR - MASUK
+    var BIAYA = 0
+    if (LAMAPARKIR <2 ){
+        BIAYA = 3000
+
+    }else {
+        BIAYA = ((LAMAPARKIR - 1) * 1000) + 3000
+    }
+    alert('ANDA PARKIR SELAMA ' + LAMAPARKIR + ' BAYAR KE SAYA Rp.' + BIAYA)
+    }
+</script>
+</html>

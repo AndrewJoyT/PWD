@@ -1,0 +1,19 @@
+<html>
+    <script>
+
+        var MASUK=parseInt(prompt('Jam berapa masuk parkir? '))
+        var A =parseInt(prompt('1. AM \n2. PM'))
+        var KELUAR =parseInt(prompt('jam berapa keluar parkir? '))
+        var B =parseInt(prompt('1. AM \n2. PM'))
+        
+
+        if(MASUK > KELUAR == 1){
+        }else if(MASUK > KELUAR == 2){
+            KELUAR+=24 
+        }var TOTAL = KELUAR - MASUK  
+            var JAMPERTAMA = (TOTAL / TOTAL)*3000
+            var JAMNORMAL = (TOTAL-1)*1000
+            var BIAYATOTAL = JAMPERTAMA + JAMNORMAL
+        alert('Anda parkir selama ' + TOTAL + ' dan total biaya anda ' + BIAYATOTAL)
+    </script>
+</html>

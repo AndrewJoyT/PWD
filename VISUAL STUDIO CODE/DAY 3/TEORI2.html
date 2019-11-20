@@ -1,0 +1,96 @@
+<html>
+    <script>
+    
+    // var Massa = prompt (' Masukkan Berat Anda ?')
+    // Massa = parseInt (Massa)
+    // var Tinggi = prompt (' Masukkan Tinggi Anda ? (cm) ')
+    // Tinggi = parseInt (Tinggi)
+    // Tinggi / 100
+
+    // var IMT = Massa/(Tinggi*Tinggi)
+
+    // if (IMT<18.5){
+    //     alert('BB KURANG')
+    // }else if ( IMT >=18.5 && IMT <=24.9){
+    //     alert('BB IDEAL')
+    // }else if ( IMT >=25.0 && IMT <=29.9){
+    //     alert('BB BERLEBIH')
+    // }else if ( IMT >=30.0 && IMT <=39.9){
+    //     alert('BB SANGAT BERLEBIH')
+    // }else (IMT >=39.0 && IMT <=100.0)   
+    //     alert('ANDA OBESITAS')
+        
+        // var angka = 1
+        // var angka2 = 1
+        // while(angka<=4){
+        //     while(angka2<3){
+        //         console.log('ini' + angka2)
+        //         angka2++
+        //     }
+        //     angka2=1
+        //     console.log(angka)
+        //     angka++
+        //     console.log(angka)
+        //     }
+
+
+            var konfirmasi = true
+
+            while(konfirmasi){
+                
+            
+                var hargasatuan = 0
+                var Belanja = prompt('PILIH BUAH YANG INGIN ANDA BELI : \n1. PISANG Rp.10rb/kg \n2. DURIAN Rp.20 rb/kg \n3. SALAK Rp.13rb/kg \n4. DUKU Rp.8rb/kg ')    
+               
+                if ( Belanja ==1 ){
+                    hargasatuan = 10000
+                    var Berat = parseInt(prompt('Mau Beli Berapa kg :'))
+                    alert('Anda Beli Buah Pisang '+ Berat + 'KG' + ' Dengan Harga ' + (hargasatuan * Berat ))
+                    konfirmasi = confirm(' ANDA MAU BELANJA LAGI?')
+                }else if   (Belanja==2 ){
+                    hargasatuan = 20000
+                    var Berat=parseInt(prompt('MAU BELI BERAPA'))
+                    alert('ANDA HARUS BAYAR ' + (hargasatuan * Berat))
+                    konfirmasi = confirm(' ANDA MAU BELANJA LAGI?')
+                }else if   (Belanja==3){
+                    hargasatuan = 13000
+                    var Berat=parseInt(prompt('MAU BELI BERAPA'))
+                    alert('ANDA HARUS BAYAR ' + (hargasatuan * Berat))
+                    konfirmasi = confirm(' ANDA MAU BELANJA LAGI?')
+                }else if   (Belanja==4){
+                    hargasatuan = 8000
+                    var Berat=parseInt(prompt('MAU BELI BERAPA'))
+                    alert('ANDA HARUS BAYAR ' + (hargasatuan * Berat))
+                    konfirmasi = confirm(' ANDA MAU BELANJA LAGI?')
+                    if(konfirmasi){
+                        alert('AYO BELANJA')
+                    }else {
+                        alert('ANDA MISKIN')
+                    }
+                }else {
+                    alert(' ANDA SALAH INPUT')
+                    konfirmasi = confirm(' ANDA MAU BELANJA ATAU TIDAK?')
+                    if(konfirmasi){
+                        alert('AYO BELANJA')
+                    }else {
+                        alert('ANDA MISKIN')
+                    }
+
+                
+                }
+            }
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</html>

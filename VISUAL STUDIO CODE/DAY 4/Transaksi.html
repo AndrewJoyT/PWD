@@ -1,0 +1,54 @@
+<html>
+    <script>
+        alert('SELAMAT DATANG')
+        do {
+            var konfirmasi1=true
+            var menuutama=prompt('MENU:\n1. BELAJAR\n2. BELANJA\n3. KELUAR')
+            if(menuutama==1){
+                var konfirmasi=true
+                while (konfirmasi) {
+                    var menubelajar=prompt('MAU BELAJAR APA? :\n1. LUAS SEGITIGA\n2. LUAS PERSEGI\n3. VOLUME BALOK')
+                    if(menubelajar==1){
+                        var alas=parseInt(prompt('MASUKKAN ALASNYA'))
+                        if(alas<=100000){
+                        }else(alert('ANDA SALAH INPUT'))
+                            var tinggi=parseInt(prompt('MASUKKAN TINGGINYA'))
+                            if(tinggi<=100000){   
+                            alert('LUAS SEGITIGA ADALAH ' + (0.5*alas*tinggi))
+                        }else{alert('ANDA SALAH INPUT')}
+                    }else if(menubelajar==2){
+                            var sisi1=parseInt(prompt('MASUKKAN SISINYA'))
+                            alert('LUAS PERSEGI ADALAH '+ (sisi1*sisi1))
+                        }else if(menubelajar==3){
+                            var panjang=parseInt(prompt('MASUKKAN PANJANG BALOK'))
+                            var lebar=parseInt(prompt('MASUKKAN LEBAR BALOK'))
+                            var tinggi=parseInt(prompt('MASUKKAN TINGGI BALOK'))
+                            alert('VOLUME BALOK ADALAH '+ (panjang*lebar*tinggi))
+                        }
+                        konfirmasi=confirm('MAU BELAJAR LAGI? ')
+                    }
+                }
+                else if(menuutama==2){
+                    var konfirmasi2=true
+                    var menubelanja= parseInt(prompt('1. AYAM Rp 10000\n2. SAPI Rp 20000\n3. SALMON Rp 30000'))
+                    if(menubelanja==1){
+                        var potong= parseInt(prompt('ANDA INGIN BERAPA POTONG? '))
+                        var harga= potong*10000
+                        alert('ANDA BELI ' + potong +' POTONG' + 'DENGAN HARGA ' + harga)
+                    }else if (menubelanja==2){
+                        var potong2= parseInt(prompt('ANDA INGIN BERAPA POTONG? '))
+                        var harga2= potong2*20000
+                        alert('ANDA BELI ' + potong2 + ' POTONG ' + 'DENGAN HARGA ' + harga2)
+                    }else if(menubelanja==3){
+                        var potong3= parseInt(prompt('ANDA INGIN BERAPA POTONG? '))
+                        var harga3= potong3*30000
+                        alert('ANDA BELI ' + potong3 + ' POTONG ' + 'DENGAN HARGA ' + harga3)
+                    }konfirmasi=confirm('INGIN BELI LAGI? ')
+                }else{
+                    alert('TERIMA KASIH ')
+                    break
+                }
+            } while (true);
+
+    </script>
+</html>

@@ -1,0 +1,33 @@
+<script>
+
+function checknama(namalogin){
+  for(var i=0;i<datanama.length;i++){
+      if(datanama[i]==namalogin){
+          return true
+      }
+  }
+  return false
+}
+alert('WELCOME')
+var datanama=['ANDREW','JOY']
+do {
+  var menu=prompt('1.Login\n2.Register\n3.Exit')
+  if(menu==1){
+      var login=prompt('masukkan nama kamu?')
+      if(checknama(login)){
+          alert('anda berhasil login')
+          break
+      }else{
+          alert('login gagal mohon register')
+      }
+  }else if(menu==2){
+      var register=prompt('masukkan nama untuk register')
+      datanama.push(register)
+      alert('berhasil register coba login dulu ')
+  }else{
+      alert('selamat tinggal')
+      break
+  }
+} while (true);
+
+</script>

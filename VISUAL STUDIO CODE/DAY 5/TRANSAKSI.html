@@ -1,0 +1,250 @@
+<script>
+    alert('WELCOME!')
+    do {
+        menu_utama=prompt('menu:\n1. Belajar\n2. Belanja\n3. Segitiga Bintang\n4. Exit')
+        if(menu_utama==1){
+            konfirmasi=true
+            while(konfirmasi){
+                menu_belajar=prompt('Mau belajar apa?\n1. Luas Segitiga\n2. Luas Persegi\n3. Volume Balok')
+                if(menu_belajar==1){
+                    while(konfirmasi){
+                        alas_segitiga=parseInt(prompt('MASUKKAN ALASNYA'))
+                        if(alas_segitiga>0){
+                            while(konfirmasi){
+                            tinggi_segitiga=parseInt(prompt('MASUKKAN TINGGINYA'))
+                                if(tinggi_segitiga>0){
+                                    alert('Luas segitiga adalah '+(0.5*alas_segitiga*tinggi_segitiga)+' cm^2')
+                                    konfirmasi=false
+                                }else{
+                                    alert('MASUKKAN ANGKANYA')
+                                }
+                            }
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }            
+                }else if(menu_belajar==2){
+                    while(konfirmasi){
+                        panjang_persegi=parseInt(prompt('MASUKKAN PANJANGNYA'))
+                        if(panjang_persegi>0){
+                            while(konfirmasi){
+                                lebar_persegi=parseInt(prompt('MASUKKAN LEBARNYA'))
+                                if(lebar_persegi>0){
+                                    alert('Luas persegi adalah '+(panjang_persegi*lebar_persegi)+' cm^2')
+                                    konfirmasi=false
+                                }else{
+                                    alert('MASUKKAN ANGKANYA')
+                                }
+                            }
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }
+                }else if(menu_belajar==3){
+                    while(konfirmasi){
+                        panjang_balok=parseInt(prompt('MASUKKAN PANJANGNYA'))
+                        if(panjang_balok>0){
+                            while(konfirmasi){
+                                lebar_balok=parseInt(prompt('MASUKKAN LEBARNYA'))
+                                if(lebar_balok>0){
+                                    while(konfirmasi){
+                                        tinggi_balok=parseInt(prompt('MASUKKAN TINGGINYA'))
+                                        if(tinggi_balok>0){
+                                            alert('Volume balok adalah '+panjang_balok*lebar_balok*tinggi_balok+' cm^3')
+                                            konfirmasi=false
+                                        }else{
+                                            alert('MASUKKAN ANGKANYA')
+                                        }
+                                    }
+                                }else{
+                                    alert('MASUKKAN ANGKANYA')
+                                }
+                            }
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }
+                }else{
+                    alert('MASUKKAN ANGKANYA')
+                }
+            konfirmasi=confirm('Ingin belajar lagi?')
+            }//menu belajar clear
+        }else if(menu_utama==2){
+            total=0
+            konfirmasi=true
+            while(konfirmasi){
+                menu_belanja=prompt('DISINI ADA\n1. Ayam Rp10rb/kg\n2. Sapi Rp20rb/kg\n3. Salmon Rp30rb/kg')
+                if(menu_belanja==1){
+                    while(konfirmasi){
+                        berat=parseInt(prompt('Berapa Kilo?'))
+                        if(berat>0){
+                            harga=berat*10000
+                            total+=harga
+                            alert('Harganya total Rp'+total)
+                            break
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }
+                    konfirmasi=confirm('Ingin belanja lagi?')
+                }else if(menu_belanja==2){
+                    while(konfirmasi){
+                        berat=parseInt(prompt('Berapa Kilo?'))
+                        if(berat>0){
+                            harga=berat*20000
+                            total+=harga
+                            alert('Harganya total Rp'+total)
+                            break
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }
+                }else if(menu_belanja==3){
+                    while(konfirmasi){
+                        berat=parseInt(prompt('Berapa Kilo?'))
+                        if(berat>0){
+                            harga=berat*30000
+                            total+=harga
+                            alert('TOTAL HARGANYA Rp'+total)
+                            break
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }
+                konfirmasi=confirm('INGIN BELANJA LAGI?')
+                }else{
+                    alert('MASUKKAN ANGKANYA')
+                }
+            }
+            alert('TOTAL SEMUANYA Rp'+total)
+            //menu belanja clear
+        }else if(menu_utama==4){
+            alert('THANKYOU')
+            break//exit clear
+        }else if(menu_utama==3){
+            konfirmasi=true
+            while(konfirmasi){
+                segitiga=prompt('PILIH JENIS SEGITIGANYA\n1. Segitiga Siku-siku\n2. Segitiga Sama Kaki')
+                if(segitiga==1){
+                    while(konfirmasi){
+                        siku_siku=prompt('PILIH ALASNYA\n1. Bawah\n2. Atas')
+                        if(siku_siku==1){
+                            while(konfirmasi){
+                                tinggi=prompt('MASUKKAN TINGGINYA?')
+                                if(tinggi>0){
+                                    function siku_bawah(tinggi){
+                                        z=''
+                                        for(i=0;i<=tinggi;i++){
+                                            for(j=0;j<i;j++){
+                                                z+=' * '
+                                            }
+                                            if(i<tinggi){
+                                                z+='\n'
+                                            }
+                                        }
+                                        return z
+                                    }
+                                    alert('INILAH HASILNYA\n'+siku_bawah(tinggi))
+                                    konfirmasi=confirm('Coba tinggi yang berbeda?')
+                                }else{
+                                    alert('INPUT ANGKANYA')
+                                }
+                            }
+                        }else if(siku_siku==2){
+                            while(konfirmasi){
+                                tinggi=prompt('MASUKKAN TINGGINYA?')
+                                if(tinggi>0){
+                                    function siku_atas(tinggi){
+                                        z=''
+                                        for(i=0;i<tinggi;i++){
+                                            for(j=i;j<tinggi;j++){
+                                                z+=' * '
+                                            }
+                                            if(i<tinggi-1){
+                                                z+='\n'
+                                            }
+                                        }
+                                        return z
+                                    }
+                                    alert('INILAH HASILNYA\n'+siku_atas(tinggi))
+                                    konfirmasi=confirm('INGIN TINGGI YANG LAIN?')
+                                }else{
+                                    alert('INPUT ANGKANYA')
+                                }
+                            }
+                        }else{
+                            alert('PILIH 1 ATAU 2')
+                        }
+                    }
+                }else if(segitiga==2){
+                    while(konfirmasi){
+                        sama_kaki=prompt('PILIH ALASNYA\n1. Bawah\n2. Atas')
+                        if(sama_kaki==1){
+                            while(konfirmasi){
+                                tinggi=prompt('MASUKKAN TINGGINYA')
+                                if(tinggi>0){
+                                    function sama_bawah(tinggi){
+                                        z=''
+                                        for(a=0;a<tinggi;a++){
+                                            for(b=a;b<tinggi-1;b++){
+                                                z+='   '
+                                            }
+                                            for(c=0;c<=a;c++){
+                                                z+=' * '
+                                            }
+                                            for(d=0;d<=a-1;d++){
+                                                z+=' * '
+                                            }
+                                            if(a<tinggi-1){
+                                                z+='\n'
+                                            }
+                                        }
+                                        return z
+                                    }
+                                    alert('Jadi gini \n'+sama_bawah(tinggi))
+                                    konfirmasi=confirm('INGIN COBA TINGGI YANG LAIN?')
+                                }else{
+                                    alert('INPUT ANGKANYA!!')
+                                }
+                            }
+                        }else if(sama_kaki==2){
+                            while(konfirmasi){
+                                tinggi=prompt('MASUKKAN TINGGINYA?')
+                                if(tinggi>0){
+                                    function sama_atas(tinggi){
+                                        z=''
+                                        for(a=0;a<tinggi;a++){
+                                            for(b=0;b<a;b++){
+                                                z+='   '
+                                            }
+                                            for(c=a;c<tinggi;c++){
+                                                z+=' * '
+                                            }
+                                            for(d=a;d<tinggi-1;d++){
+                                                z+=' * '
+                                            }
+                                            if(a<tinggi-1){
+                                                z+='\n'
+                                            }
+                                        }
+                                        return z
+                                    }
+                                    alert('Jadi gini \n'+sama_atas(tinggi))
+                                    konfirmasi=confirm('Coba tinggi yang berbeda?')
+                                }else{
+                                    alert('MASUKKAN ANGKANYA')
+                                }
+                            }
+                        }else{
+                            alert('MASUKKAN ANGKANYA')
+                        }
+                    }
+                }else{
+                    alert('MASUKKAN ANGKANYA')
+                }//menu segitiga clear
+            }
+        }else{
+            alert('MASUKKAN ANGKANYA')
+        }//loop menu utama clear
+    }while (true)
+</script>

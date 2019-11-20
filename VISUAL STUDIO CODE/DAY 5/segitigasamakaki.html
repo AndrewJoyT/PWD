@@ -1,0 +1,51 @@
+<html>
+<Script>
+
+var tinggi=parseInt(prompt('Masukkan Tingginya? '))
+     var tinggi = 5
+      function segitigabesar(tinggi) {
+        var z = '';
+
+        for (a = 0; a < tinggi; a++) {
+          for (b = a; b < tinggi - 1; b++) {
+            z += ' ';
+          }
+          for (c = 0; c <= a; c++) {
+            z += '*';
+          }
+          for (d = 0; d <= a - 1; d++) {
+            z += '*';
+          }
+          if (a < tinggi - 1) {
+            z += '\n';
+          }
+        }
+        return z
+      }
+     alert(segitigabesar(tinggi))
+
+     var tinggi=parseInt(prompt('Masukkan Tingginya? '))
+      var tinggi = 5
+      function segitigabesarterbalik(tinggi) {
+        var z = '';
+        for ( a = 0; a < tinggi; a++) {
+          for ( b = 0; b <= a; b++) {
+            z += ' ';
+          }
+          for ( c = a; c < tinggi; c++) {
+            z += '*';
+          }
+          for ( d = a + 1; d < tinggi; d++) {
+            z += '*';
+          }
+          if (a < tinggi - 1) {
+            z += '\n';
+          }
+        }
+       return z
+      }
+      alert(segitigabesarterbalik(tinggi))
+    
+     
+      </Script>
+</html>
