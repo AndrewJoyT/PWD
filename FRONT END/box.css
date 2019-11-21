@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.flexboxnya{
+    display: flex;
+    width: 50%;
+    height: 100px;
+}
+.nomor1{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    height: auto;
+    margin: 0%;
+    background-color:yellow;
+}
+.nomor2{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    height: auto;
+    background-color: gray;
+
+}
+.nomor3{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    height: auto;
+    background-color: yellow;
+}
+.flexboxnya2{
+    display: flex;
+    width: 50%;
+    height: 100px;
+}
+.nomor4{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    background-color: gray;
+}
+.nomor5{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    background-color: yellow;
+}
+.nomor6{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    background-color: gray;
+}
+.flexboxnya3{
+    display: flex;
+    width: 50%;
+    height: 100px;
+}
+.nomor7{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    background-color: yellow;
+}
+.nomor8{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    background-color: gray;
+
+}
+.nomor9{
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+    background-color: yellow;
+}
